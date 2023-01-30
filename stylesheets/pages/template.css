@@ -1,0 +1,403 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header,
+.navigation {
+  width: 1020px;
+  margin: 0 auto;
+}
+
+/* ---------------------------------------------- */
+/* 헤더                                            */
+/* ---------------------------------------------- */
+.header .button--category {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  width: 110px;
+  height: 116px;
+  background-color: var(--color-blue-600);
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--color-white);
+  border: none;
+}
+
+.header .button--category svg {
+  margin-bottom: 12px;
+}
+
+.header .button--category:focus {
+  border-radius: 4px;
+  /* outline: 1px solid var(--color-red-500); */
+  outline: none;
+  box-shadow: 0px 0px 0px 1px rgba(255, 0, 0, 1);
+}
+
+
+
+
+/* ---------------------------------------------- */
+/* 내비게이션                                        */
+/* ---------------------------------------------- */
+/* .navigation h2 {
+  text-indent: -9999px;
+} */
+.navigation {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  /* display: none; */
+  visibility: hidden;
+  opacity: 0;
+  width: 1020px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.navigation h2 {
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+.navigation a {
+  display: block;
+}
+
+.navigation .navigation__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.navigation.is--active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.navigation .navigation__list {
+  width: 180px;
+  padding: 10px 15px;
+  background-color: var(--color-white);
+}
+
+.navigation .navigation__list li {
+
+  margin: 0 auto;
+  width: 170px;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.navigation .navigation__list li a {
+  padding: 6px 0;
+
+}
+
+
+.navigation .one_depth {
+  position: relative;
+}
+
+.navigation .one_depth li a.is--active+.two_depth {
+  display: block;
+}
+
+.navigation .one_depth .two_depth {
+  position: absolute;
+  top: 0;
+  left: 180px;
+  display: none;
+  height: 100%;
+}
+
+.navigation .two_depth li a.is--active+.three_depth {
+  display: block;
+}
+
+.navigation .one_depth .two_depth .three_depth {
+  position: absolute;
+  top: 0;
+  left: 180px;
+  display: none;
+  height: 100%;
+}
+
+.navigation .one_depth li a.is--active,
+.navigation .three_depth li a:hover,
+.navigation .three_depth li a:focus {
+  color: var(--color-blue-600);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.navigation .one_depth li a.is--active::before,
+.navigation .two_depth li a:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-color: var(--color-gray-200);
+}
+
+.navigation .one_depth li a.is--active {
+  background: url('../../assets/icon/more-right-active.svg') no-repeat right 20px center;
+}
+
+
+/* ---------------------------------------------- */
+/* 메인 콘텐츠                                       */
+/* ---------------------------------------------- */
+/* 메인 콘텐츠 영역의 최소 높이 설정 */
+.main {
+  min-height: 52rem;
+}
+
+/* ---------------------------------------------- */
+/* 푸터                                            */
+/* ---------------------------------------------- */
+/* 푸터 탑 */
+.footer .footer_top_wrap {
+  padding: 7px 0;
+  width: 100%;
+  background-color: var(--color-gray-200);
+
+}
+
+.footer .footer_top_wrap .footer_top ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .footer_top_wrap .footer_top ul li {
+  position: relative;
+  padding: 5px 14px;
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--color-gray-800);
+}
+
+.footer .footer_top_wrap .footer_top ul li .divider {
+  position: absolute;
+  right: -5px;
+}
+
+/* 푸터 미들 */
+.footer .footer_middle_wrap {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  width: 100%;
+}
+
+.footer .footer_middle_wrap .footer_middle {
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-gray-800);
+
+}
+
+.footer .footer_middle_wrap .footer_middle span {
+  display: block;
+}
+
+.footer .footer_middle_wrap .logo {
+  width: 200px;
+  text-indent: -9999px;
+  background: url('../../assets/logo/logo-mono.svg') no-repeat;
+}
+
+.footer .footer_middle_wrap .information {
+  width: 400px;
+  padding-left: 60px;
+}
+
+.footer .footer_middle_wrap .information ul>li+li {
+  margin-top: 12px;
+}
+
+.footer .footer_middle_wrap .sub_information {
+  width: 400px;
+  padding-left: 40px;
+}
+
+.footer .footer_middle_wrap .sub_information .bar {
+  display: inline-block;
+}
+
+.footer .footer_middle_wrap .sub_information .bar:nth-of-type(1) {
+  padding-right: 5px;
+  border-right: 2px solid var(--color-gray-800);
+  line-height: 12px;
+}
+
+.footer .footer_middle_wrap .sub_information span+span {
+  margin-top: 8px;
+}
+
+
+
+.footer .footer_middle_wrap .bank {
+  width: 300px;
+}
+
+.footer .footer_middle_wrap .bank span:nth-of-type(1) {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.footer .footer_middle_wrap .sub_information .tel {
+  font-weight: 700;
+  font-size: 48px;
+
+}
+
+
+/* 푸터 바텀 */
+.footer .footer_bottom_wrap {
+  width: 100%;
+  background-color: var(--color-gray-900);
+  color: var(--color-gray-200);
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.footer .footer_bottom_wrap .footer_bottom {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 16px 0;
+  width: 1020px;
+
+}
+
+.footer .footer_sns_menu {
+  margin: 25px 0 0 45px;
+  width: 122px;
+}
+
+.footer .footer_sns_menu ul {
+  display: flex;
+  align-items: center;
+}
+
+.footer .footer_sns_menu ul li {
+  padding: 5px;
+}
+
+.footer .footer_sns_menu ul li:nth-of-type(3) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(174.12deg, #285AEB 5.61%, #BC1888 22.32%, #CC2366 36.16%, #DC2743 51.91%, #E6683C 73.38%, #F09433 91.99%);
+  border-radius: 50%;
+}
+
+
+/* ---------------------------------------------------- */
+/* iconFont */
+/* ---------------------------------------------------- */
+@font-face {
+  font-family: 'iconFont';
+  src: url('../../assets/iconfont/fonts/iconFont.eot?8c7dlo');
+  src: url('../../assets/iconfont/fonts/iconFont.eot?8c7dlo#iefix') format('embedded-opentype'),
+    url('../../assets/iconfont/fonts/iconFont.ttf?8c7dlo') format('truetype'),
+    url('../../assets/iconfont/fonts/iconFont.woff?8c7dlo') format('woff'),
+    url('../../assets/iconfont/fonts/iconFont.svg?8c7dlo#iconFont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'iconFont' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-appliances:before {
+  content: "\e900";
+}
+
+.icon-baby:before {
+  content: "\e901";
+}
+
+.icon-beauty:before {
+  content: "\e902";
+}
+
+.icon-book:before {
+  content: "\e903";
+}
+
+.icon-car:before {
+  content: "\e904";
+}
+
+.icon-clothes:before {
+  content: "\e905";
+}
+
+.icon-foods:before {
+  content: "\e906";
+}
+
+.icon-houseware:before {
+  content: "\e907";
+}
+
+.icon-interior:before {
+  content: "\e908";
+}
+
+.icon-kitchenware:before {
+  content: "\e909";
+}
+
+.icon-pet:before {
+  content: "\e90a";
+}
+
+.icon-sports:before {
+  content: "\e90b";
+}
+
+.icon-stationery:before {
+  content: "\e90c";
+}
+
+.icon-theme:before {
+  content: "\e90d";
+}
+
+.icon-toy:before {
+  content: "\e90e";
+}
+
+.icon-travel:before {
+  content: "\e90f";
+}
